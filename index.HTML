@@ -8,12 +8,14 @@
 </head>
 <body>
     <script>
+        // let computer choose 
         function getComputerChoice() {
             var game = ['rock', 'paper', 'scissors'];
             var computer = game[Math.floor(Math.random()*game.length)];
             return(computer)
         }
 
+        // let user choose
         function playerSelection() {
             let userInput = prompt('What is your choice?')
             let Input = userInput.toLowerCase()
@@ -24,10 +26,8 @@
             }
         }
 
-        function computerSelection() {
-            return getComputerChoice()
-        }
-
+        // play one round
+        // its still missing a way to import the values, but you can still do it by hand
         function playRound(playerSelection, computerSelection) {
             let roundWinner = '';
             if (playerSelection === computerSelection) {
@@ -59,7 +59,20 @@
             }
             return roundWinner
         }
-        
+
+        // play five rounds
+        function game () {
+            for (let i = 0; i < 5; i++) {
+                let playerPoints = 0
+                let computerPoints = 0
+                playerSelection = prompt('Choose you fighter! Rock, paper or scissors');
+                console.log(playerSelection);
+                computerSelection = getComputerChoice();
+                console.log(computerSelection);
+                roundResult = playRound(playerSelection, computerSelection);
+                console.log(roundResult);
+            }
+        }
     </script>
 </body>
 </html>
