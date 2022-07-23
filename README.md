@@ -1,1 +1,2 @@
 # rock-paper-scissors-odin
+In this project I will be implementing the HTML, CSS and JavaScript knowledge I have obtained till now on the Odin Project. It will be a simple rock-paper-scissor game against the computer.
