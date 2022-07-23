@@ -13,12 +13,20 @@
             var computer = game[Math.floor(Math.random()*game.length)];
             return computer
         }
+
         function playerSelection(choice) {
-            return choice.toLowerCase()
+            userInput = choice.toLowerCase()
+            if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+                return userInput
+            } else {
+                return 'Invalid input. Try again with rock, paper or scissors'
+            }
         }
+
         function computerSelection() {
             return getComputerChoice()
         }
+
         function playRound(playerSelection, computerSelection) {
             if (playerSelection === computerSelection) {
                 return 'The game is a tie!'
